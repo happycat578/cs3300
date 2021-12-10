@@ -1,7 +1,37 @@
+<style>
+h1{
+  color: #24221d;
+  text-align: center;
+}
+table{
+  color:blue;
+  text-align: center;
+  width:80% ;
+  margin-left: auto; 
+  margin-right: auto;
+
+}
+
+tbody{
+  border: 1px solid black;
+  color:black;
+}
+body{
+  background-color: #6fe3df ;
+}
+thead{
+  color:black;
+}
+h2{
+  font-size:15px;
+}
+
+</style>
+
 <p id="notice"><%= notice %></p>
 
 <h1>Projects</h1>
-
+<h2><%= link_to 'New Project', new_project_path %></h2>
 <table>
   <thead>
     <tr>
@@ -16,8 +46,8 @@
       <tr>
         <td><%= project.title %></td>
         <td><%= project.description %></td>
-        <td><%= link_to 'Show', project %></td>
-        <td><%= link_to 'Edit', edit_project_path(project) %></td>
+        <td><%= link_to 'Show', project%></td>
+        
         <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
@@ -26,4 +56,5 @@
 
 <br>
 
-<%= link_to 'New Project', new_project_path %>
+
+</br>

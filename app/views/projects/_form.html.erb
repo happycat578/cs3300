@@ -1,3 +1,29 @@
+
+<style>
+div.fieldTT
+{
+  text-align: center;
+}
+div.fieldDB
+{
+  text-align: center;
+  
+ 
+}
+form.text_area{
+  width:200px;
+}
+div.fieldTB
+{
+  text-align: center;
+  width: 100%
+ 
+}
+div.actions{
+  text-align: center;
+}
+
+</style>
 <%= form_with(model: project, local: true) do |form| %>
   <% if project.errors.any? %>
     <div id="error_explanation">
@@ -10,18 +36,21 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= form.label :title %>
+  <div class="fieldTT">
+  <%= form.label :title %>
+  </div>
+  <div class="fieldTB">
     <%= form.text_field :title %>
   </div>
-
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description %>
+  <div class="fieldTT">
+  <%= form.label :description %>
+  </div>
+  <div class="fieldDB">
+    <%= form.text_area :description ,cols: 60, rows: 8 %>
   </div>
 
   <div class="actions">
     <%= form.submit %>
   </div>
 <% end %>
+

@@ -1,14 +1,29 @@
+<style>
+
+body{
+  background-color: #6fe3df ;
+}
+p.title{
+  font-size: 50px;
+  text-align: center;
+}
+p.body{
+  text-align: center;
+  
+}
+</style>
+<%= link_to 'Edit', edit_project_path(@project) %> |
+<%= link_to 'Back', projects_path %>
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
+<p class="title">
+ 
   <%= @project.title %>
 </p>
 
-<p>
-  <strong>Description:</strong>
+<p class="body">
+  
   <%= @project.description %>
 </p>
 
-<%= link_to 'Edit', edit_project_path(@project) %> |
-<%= link_to 'Back', projects_path %>
+
